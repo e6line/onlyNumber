@@ -1,5 +1,5 @@
 # OnlyNumber
-input[type=text] only input Number
+Input[type=text] only input Number
 
 
 # Input 输入框 只允许输入数字
