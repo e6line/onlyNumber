@@ -91,8 +91,8 @@
 				}
 			}
 			if(isMinus && isDecimal){
-				if(dot === 1 && minus === 0 && length == 2){
-					v = '-0.';
+				if(dot === 1 && minus === 0 && length >= 2){
+					v = '-0.' + v.replace(/\-\./g,'');
 				}
 			}
 			if(!isDecimal && !isMinus){
