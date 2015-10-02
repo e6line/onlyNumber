@@ -12,7 +12,7 @@
 	}
 }(function ($) {
 
-	// 只允许输入数字
+	// 只允许输入数字和键盘相关操作
 	function onlyNumber(ev) {
 		var code = ev.keyCode || ev.which;
 		if((ev.ctrlKey && code == 97) || (ev.ctrlKey && code == 65)){  // Ctrl+A
