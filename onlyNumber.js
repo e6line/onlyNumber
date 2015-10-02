@@ -1,8 +1,7 @@
-// 只能输入数字
-// 校验 负号只能在第一位
-// 校验 负号如果有只能有一位
-// 校验 小数点如果有只能有一位
-// 校验 小数点在第一位时自动补零
+/* 
+ * Name: onlyNumber
+ * Date: 2015/10/02
+*/
 (function (factory) {
 	if (typeof define === 'function' && define.amd) {
 		define(['jquery'], factory);
