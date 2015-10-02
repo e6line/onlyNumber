@@ -1,4 +1,4 @@
-# onlyNumber
+# OnlyNumber
 input[type=text] only input Number
 
 
