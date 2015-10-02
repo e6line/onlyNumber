@@ -13,3 +13,14 @@ input[type=text] only input Number
 // 校验 小数点在第一位时自动补零
 
 // 校验 负号后直接跟小数点 "-." ==> "-0." 
+
+# 调用方式
+
+  将事件直接委托在父级上
+  
+    var oBody = $("body");
+    oBody.onlyNumber({
+        className: '.plNumber',
+        isDecimal: true,
+        isMinus: false
+    });
