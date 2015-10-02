@@ -50,12 +50,17 @@
 		var minus = $.inArray('-', v.split(''));
 		var length = v.length;
 		var validChars = [0,1,2,3,4,5,6,7,8,9];
+		if(isDecimal){
+			validChars.push('.');
+		}
+		if(isMinus){
+			validChars.push('-');
+		}
 		if(v && length>0){
 			if(isDecimal){
 				if(dot === 0){
 					v = '0' + v;
 				}else{
-					validChars.push('.');
 					for(var i = length - 1; i >= 0; i--){
 						var ch = v.charAt(i);
 						var validChar = false;
@@ -81,8 +86,13 @@
 				}
 			}
 			if(isMinus){
-				if(minus === 0){
-					v = '-' + v;
+				if(minus >= 0){
+					v = '-' + v.replace(/-/g,'');
+				}
+			}
+			if(isMinus && isDecimal){
+				if(dot === 1 && minus === 0 && length == 2){
+					v = '-0.';
 				}
 			}
 			if(!isDecimal && !isMinus){
